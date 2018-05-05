@@ -4,19 +4,19 @@ require 'net/https'
 require 'xmlsimple'
 require 'csv'
 
-require 'salesforce_bulk_api/version'
-require 'salesforce_bulk_api/concerns/throttling'
-require 'salesforce_bulk_api/job'
-require 'salesforce_bulk_api/connection'
+require 'salesforce_bulk_api_serial_or_parallel/version'
+require 'salesforce_bulk_api_serial_or_parallel/concerns/throttling'
+require 'salesforce_bulk_api_serial_or_parallel/job'
+require 'salesforce_bulk_api_serial_or_parallel/connection'
 
-module SalesforceBulkApi
+module SalesforceBulkApiSerialOrParallel
   class Api
     attr_reader :connection
 
     SALESFORCE_API_VERSION = '1.0.1'
 
     def initialize(client)
-      @connection = SalesforceBulkApi::Connection.new(SALESFORCE_API_VERSION, client)
+      @connection = SalesforceBulkApiSerialOrParallel::Connection.new(SALESFORCE_API_VERSION, client)
       @listeners = { job_created: [] }
     end
 
@@ -63,13 +63,13 @@ module SalesforceBulkApi
     end
 
     def job_from_id(job_id)
-      SalesforceBulkApi::Job.new(job_id: job_id, connection: @connection)
+      SalesforceBulkApiSerialOrParallel::Job.new(job_id: job_id, connection: @connection)
     end
 
     def do_operation(operation, sobject, records, external_field, get_response, timeout, batch_size, send_nulls = false, no_null_list = [], concurrency_mode = nil)
       count operation.to_sym
 
-      job = SalesforceBulkApi::Job.new(
+      job = SalesforceBulkApiSerialOrParallel::Job.new(
           operation: operation,
           sobject: sobject,
           records: records,

@@ -1,4 +1,4 @@
-module SalesforceBulkApi
+module SalesforceBulkApiSerialOrParallel
 require 'timeout'
 
   class Connection

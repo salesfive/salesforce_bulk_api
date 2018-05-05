@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'salesforce_bulk_api'
+require 'salesforce_bulk_api_serial_or_parallel'
 
 RSpec.configure do |c|
   c.filter_run :focus => true

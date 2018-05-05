@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'yaml'
 require 'restforce'
 
-describe SalesforceBulkApi do
+describe SalesforceBulkApiSerialOrParallel do
 
   before :each do
     auth_hash = YAML.load_file('auth_credentials.yml')
@@ -18,7 +18,7 @@ describe SalesforceBulkApi do
 
     @account_id = auth_hash['salesforce']['test_account_id']
 
-    @api = SalesforceBulkApi::Api.new(@sf_client)
+    @api = SalesforceBulkApiSerialOrParallel::Api.new(@sf_client)
   end
 
   after :each do

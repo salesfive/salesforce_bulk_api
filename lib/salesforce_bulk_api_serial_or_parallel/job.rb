@@ -1,4 +1,4 @@
-module SalesforceBulkApi
+module SalesforceBulkApiSerialOrParallel
 
   class Job
     attr_reader :job_id
@@ -171,7 +171,7 @@ module SalesforceBulkApi
       # timeout is in seconds
       begin
         state = []
-        Timeout::timeout(timeout, SalesforceBulkApi::JobTimeout) do
+        Timeout::timeout(timeout, SalesforceBulkApiSerialOrParallel::JobTimeout) do
           while true
             job_status = self.check_job_status
             if job_status && job_status['state'] && job_status['state'][0] == 'Closed'
@@ -194,7 +194,7 @@ module SalesforceBulkApi
             end
           end
         end
-      rescue SalesforceBulkApi::JobTimeout => e
+      rescue SalesforceBulkApiSerialOrParallel::JobTimeout => e
         puts 'Timeout waiting for Salesforce to process job batches #{@batch_ids} of job #{@job_id}.'
         puts e
         raise

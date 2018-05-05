@@ -1,4 +1,4 @@
-module SalesforceBulkApi::Concerns
+module SalesforceBulkApiSerialOrParallel::Concerns
   module Throttling
 
     def throttles

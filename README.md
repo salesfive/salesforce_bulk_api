@@ -10,11 +10,11 @@ Using this gem is simple and straight forward.
 
 To initialize:
 
-   `sudo gem install salesforce_bulk_api`
+   `sudo gem install salesforce_bulk_api_serial_or_parallel`
 
 or add
 
-   `gem salesforce_bulk_api`
+   `gem salesforce_bulk_api_serial_or_parallel`
    
 in your Gemfile
 
@@ -29,7 +29,7 @@ You can use username password combo, OmniAuth, Oauth2
 You can use as many records possible in the Array. Governor limits are taken care of inside the gem.
 
 
-	require 'salesforce_bulk_api'
+	require 'salesforce_bulk_api_serial_or_parallel'
 	client = Databasedotcom::Client.new :client_id =>  SFDC_APP_CONFIG["client_id"], :client_secret => SFDC_APP_CONFIG["client_secret"] #client_id and client_secret respectively
 	client.authenticate :token => "my-oauth-token", :instance_url => "http://na1.salesforce.com"  #=> "my-oauth-token"
 
@@ -37,7 +37,7 @@ You can use as many records possible in the Array. Governor limits are taken car
 
 OR
 
-	require 'salesforce_bulk_api'
+	require 'salesforce_bulk_api_serial_or_parallel'
 	client = Restforce.new(
 	  username:       SFDC_APP_CONFIG['SFDC_USERNAME'],
 	  password:       SFDC_APP_CONFIG['SFDC_PASSWORD'],
@@ -105,7 +105,7 @@ OR
 
 ## Installation
 
-    sudo gem install salesforce_bulk_api
+    sudo gem install salesforce_bulk_api_serial_or_parallel
 	
 ## Contribute
 
