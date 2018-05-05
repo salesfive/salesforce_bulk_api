@@ -16,17 +16,20 @@ module SalesforceBulkApi
       @XML_HEADER     = '<?xml version="1.0" encoding="utf-8" ?>'
     end
 
-
-
-    def create_job(batch_size, send_nulls, no_null_list)
+    def create_job(batch_size, send_nulls, no_null_list, concurrency_mode)
       @batch_size = batch_size
       @send_nulls = send_nulls
       @no_null_list = no_null_list
+      @concurrency_mode = concurrency_mode
 
       xml = "#{@XML_HEADER}<jobInfo xmlns=\"http://www.force.com/2009/06/asyncapi/dataload\">"
       xml += "<operation>#{@operation}</operation>"
       xml += "<object>#{@sobject}</object>"
-      if !@external_field.nil? # This only happens on upsert
+      if @concurrency_mode
+        xml += "<concurrencyMode>#{@concurrency_mode}</concurrencyMode>"
+      end
+      # This only happens on upsert
+      if !@external_field.nil?
         xml += "<externalIdFieldName>#{@external_field}</externalIdFieldName>"
       end
       xml += "<contentType>XML</contentType>"
