@@ -13,7 +13,7 @@ module SalesforceBulkApiSerialOrParallel
   class Api
     attr_reader :connection
 
-    SALESFORCE_API_VERSION = '1.0.1'
+    SALESFORCE_API_VERSION = '42.0'
 
     def initialize(client)
       @connection = SalesforceBulkApiSerialOrParallel::Connection.new(SALESFORCE_API_VERSION, client)
