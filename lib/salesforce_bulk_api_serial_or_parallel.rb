@@ -33,7 +33,7 @@ module SalesforceBulkApiSerialOrParallel
     end
 
     def delete(sobject, records, get_response = false, batch_size = 10000, timeout = 1500)
-      do_operation('delete', sobject, records, nil, get_response, timeout, batch_size, concurrency)
+      do_operation('delete', sobject, records, nil, get_response, timeout, batch_size)
     end
 
     def query(sobject, query, batch_size = 10000, timeout = 1500)
