@@ -3,6 +3,8 @@
 ## Overview
 
 Salesforce bulk API is a simple ruby gem for connecting to and using the Salesforce Bulk API. It is actually a re-written code from [salesforce_bulk](https://github.com/jorgevaldivia/salesforce_bulk).Written to suit many more other features as well.
+This is a forked repo from https://github.com/yatish27/salesforce_bulk_api with support for setting the batch concurrency settings (serial vs parallel)
+
 
 ## How to use
 
