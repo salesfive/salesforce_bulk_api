@@ -29,7 +29,7 @@ module SalesforceBulkApiSerialOrParallel
     end
 
     def create(sobject, records, get_response = false, send_nulls = false, batch_size = 10000, timeout = 1500, concurrency = nil)
-      do_operation('insert', sobject, records, nil, get_response, timeout, batch_size, send_nulls, concurrency)
+      do_operation('insert', sobject, records, nil, get_response, timeout, batch_size, send_nulls, [], concurrency)
     end
 
     def delete(sobject, records, get_response = false, batch_size = 10000, timeout = 1500)
