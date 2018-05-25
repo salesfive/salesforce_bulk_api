@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2e86cd3-742e-4101-9fd6-ad4ecdcca979" name="Default" comment="" />
+    <list default="true" id="d2e86cd3-742e-4101-9fd6-ad4ecdcca979" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/version.rb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="salesforce_bulk_api_serial_or_parallel.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="salesforce_bulk_api_serial_or_parallel.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="103" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
+            <state relative-caret-position="102">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/version.rb">
+      <file leaf-file-name="throttling.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/concerns/throttling.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -34,12 +37,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>do_operation</find>
-      <find>SalesforceBulkApi</find>
-      <find>salesforce_bulk_api</find>
       <find>Serial</find>
       <find>SalesforceBulkApiSerialOrParallel</find>
       <find>1.0.1</find>
+      <find>SalesforceBulkApi</find>
       <find>version</find>
+      <find>salesforce_bulk_api</find>
+      <find>0.5</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -53,8 +57,8 @@
         <option value="$PROJECT_DIR$/salesforce_bulk_api.gemspec" />
         <option value="$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/job.rb" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb" />
         <option value="$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/version.rb" />
+        <option value="$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb" />
       </list>
     </option>
   </component>
@@ -68,7 +72,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="-1528" />
+    <option name="y" value="353" />
     <option name="width" value="1440" />
     <option name="height" value="807" />
   </component>
@@ -141,16 +146,18 @@
       <workItem from="1525786527346" duration="4277000" />
       <workItem from="1525796743721" duration="279000" />
       <workItem from="1525797160162" duration="20000" />
+      <workItem from="1527267347487" duration="1167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8617000" />
+    <option name="totallyTimeSpent" value="9784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="807" extended-state="0" />
+    <frame x="-1528" y="353" width="1440" height="807" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -179,6 +186,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="103" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -274,13 +295,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/salesforce_bulk_api.gemspec" />
-    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/job.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/salesforce_bulk_api_serial_or_parallel.gemspec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -306,17 +320,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api/connection.rb" />
-    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb">
+    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/job.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="103" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
+        <state relative-caret-position="255">
+          <caret line="204" column="34" lean-forward="true" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state>
+          <caret column="24" selection-start-column="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel/concerns/throttling.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/salesforce_bulk_api_serial_or_parallel.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
