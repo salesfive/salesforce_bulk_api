@@ -35,7 +35,7 @@ You can use as many records possible in the Array. Governor limits are taken car
 	client = Databasedotcom::Client.new :client_id =>  SFDC_APP_CONFIG["client_id"], :client_secret => SFDC_APP_CONFIG["client_secret"] #client_id and client_secret respectively
 	client.authenticate :token => "my-oauth-token", :instance_url => "http://na1.salesforce.com"  #=> "my-oauth-token"
 
-    salesforce = SalesforceBulkApi::Api.new(client)
+    salesforce = SalesforceBulkApiSerialOrParallel::Api.new(client)
 
 OR
 
@@ -49,7 +49,7 @@ OR
 	  host:           SFDC_APP_CONFIG['SFDC_HOST']
 	)
 
-	salesforce = SalesforceBulkApi::Api.new(client)
+	salesforce = SalesforceBulkApiSerialOrParallel::Api.new(client)
 
 
 ### Sample operations:
@@ -87,7 +87,7 @@ OR
 ### Helpful methods:
 
     # Check status of a job via #job_from_id
-	job = salesforce.job_from_id('a00A0001009zA2m') # Returns a SalesforceBulkApi::Job instance
+	job = salesforce.job_from_id('a00A0001009zA2m') # Returns a SalesforceBulkApiSerialOrParallel::Job instance
 	puts "status is: #{job.check_job_status.inspect}"
 
 ### Listening to events:

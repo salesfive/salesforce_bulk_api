@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler'
 Bundler.require()
-require 'salesforce_bulk_api/version'
+require 'salesforce_bulk_api_serial_or_parallel/version'
 require 'net/https'
 require 'xmlsimple'
 require 'csv'
