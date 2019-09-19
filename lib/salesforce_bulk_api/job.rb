@@ -24,7 +24,9 @@ module SalesforceBulkApi
       xml = "#{@XML_HEADER}<jobInfo xmlns=\"http://www.force.com/2009/06/asyncapi/dataload\">"
       xml += "<operation>#{@operation}</operation>"
       xml += "<object>#{@sobject}</object>"
-      xml += "<concurrencyMode>Serial</concurrencyMode>"
+      if @external_field.nil?
+        xml += "<concurrencyMode>Serial</concurrencyMode>"
+      end
       # This only happens on upsert
       if !@external_field.nil?
         xml += "<externalIdFieldName>#{@external_field}</externalIdFieldName>"
